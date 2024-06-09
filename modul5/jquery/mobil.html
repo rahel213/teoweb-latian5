@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Mobil</title>
+<style>
+        .cl_red{
+            color: red;
+        }
+
+        #img {
+            position: absolute; 
+        }
+</style>
+</head>
+<body>
+    <button type="button" id="atas">Atas</button>
+    <button type="button" id="bawah">Bawah</button>
+    <button type="button" id="kanan">Kanan</button>
+    <button type="button" id="kiri">Kiri</button>
+    <button type="button" id="gantiWarna">Ganti Warna</button>
+
+    <br>
+
+    <h1 id="change">Api jquery Positition and Offset</h1>
+    <img src="car.jpg" alt="" id="img" width="100px">
+
+    <script>
+        $(document).ready(function(){
+            $('#atas').click(function(){
+                $("#img").animate({top: '-=50px'});
+            });
+
+            $('#bawah').click(function(){
+                $("#img").animate({top: '+=50px'});
+            });
+
+            $('#kanan').click(function(){
+                $("#img").animate({left: '+=50px'});
+            });
+
+            $('#kiri').click(function(){
+                $("#img").animate({left: '-=50px'});
+            });
+
+            $('#gantiWarna').click(function(){
+                $('#change').addClass('cl_red');
+                
+            });
+        });
+    </script>
+</body>
+</html>

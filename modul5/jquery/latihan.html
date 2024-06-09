@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator jquery</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <label for="Angka1">Angka 1</label>
+    <br>
+    <input type="text" name="Angka1" id="angka1" placeholder="Masukkan Angka 1">
+    <br>
+    <label for="Angka2">Angka 2</label><br>
+    <input type="text" name="Angka2" id="angka2" placeholder="Masukkan Angka 2">
+    <br>
+    <button id="kali" type="button">Kali</button>
+    <button id="bagi" type="button">Bagi</button>
+    <button id="pkurang" type="button">Kurang</button>
+    <button id="jumlah" type="button">Jumlah</button>
+    <br>
+    Hasil
+    <br>
+    <input type="text" name="" id="hasil" readonly>
+    
+    <script>
+        
+        $(document).ready(function(){
+            $("#kali").click(function(){
+                var angka1 = Number($("#angka1").val());
+                var angka2 = Number($("#angka2").val());
+                var hasil = angka1 * angka2;
+                $("#hasil").val(hasil);
+            });
+            
+            $("#bagi").click(function(){
+                var angka1 = Number($("#angka1").val());
+                var angka2 = Number($("#angka2").val());
+                var hasil = angka1 / angka2;
+                $("#hasil").val(hasil);
+            });
+            
+            $("#jumlah").click(function(){
+                var angka1 = Number($("#angka1").val());
+                var angka2 = Number($("#angka2").val());
+                var hasil = angka1 + angka2;
+                $("#hasil").val(hasil);
+            });
+            
+            $("#kurang").click(function(){
+                var angka1 = Number($("#angka1").val());
+                var angka2 = Number($("#angka2").val());
+                var hasil = angka1 - angka2;
+                $("#hasil").val(hasil);
+            });
+        });
+    </script>
+</body>
+</html>

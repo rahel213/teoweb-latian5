@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Mobil</title>
+<style>
+        .cl_red {
+            color: red;
+        }
+
+        #img {
+            position: absolute; 
+        }
+</style>
+</head>
+<body>
+    <h1>Gerakkan Dengan button Arrow Keyboard</h1>
+    <br>
+    <img src="car.jpg" alt="" id="img" width="100px">
+
+    <script>
+            $(document).keydown(function(e) {
+                switch(e.which) {
+                    case 37: 
+                        $("#img").animate({left: '-=50px'});
+                        break;
+                    case 38:
+                        $("#img").animate({top: '-=50px'});
+                        break;
+                    case 39: 
+                        $("#img").animate({left: '+=50px'});
+                        break;
+                    case 40: 
+                        $("#img").animate({top: '+=50px'});
+                        break;
+                    default: return; 
+                }
+                e.preventDefault(); 
+            });
+        // });
+    </script>
+</body>
+</html>

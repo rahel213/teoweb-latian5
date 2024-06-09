@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Belajar jQuery</title>
+        <script src="jquery-3.7.1.js"></script>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            #judul{
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="tombol">Alert</button> 
+        <button id="tampil">Tampil Judul</button>
+        <button id="sembunyi">Sembunyikan Judul</button>
+        <br>
+        <button id="animasi_kanan">Gerak Kanan</button>
+        <button id="animasi_kiri">Gerak Kiri</button>
+        <br>
+        <input type="text" id="isi"> 
+        <button id="submit">Submit</button>
+        <input type="text" id="hasil"> 
+        <textarea cols="50"></textarea>
+        <h2><div id="judul">Belajar</div></h2>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $('#isi').keyup(function(){
+            var isi_teks = $('#isi').val();
+            $('#judul').html(isi_teks);
+            $('#hasil').val(isi_teks);
+            $('textarea').html(isi_teks);
+        })
+
+        $('#submit').mouseover(function(){
+            var isi_teks = $('#isi').val();
+            $('#judul').html(isi_teks);
+        })
+        $('#tombol').click(function(){
+            alert('NOTIF JS JQUERY');
+        })
+        $('#sembunyi').click(function(){
+            $('#judul').hide();
+        })
+        $('#tampil').click(function(){
+            $('#judul').show();
+        })
+        $('#animasi_kanan').click(function(){
+            $("#judul").animate({left: '250px'});
+        })
+        $('#animasi_kiri').click(function(){
+            $("#judul").animate({left: '0px'});
+        })
+    })
+</script>
